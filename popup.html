@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Trello Card</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="icons/icon32.png" alt="Trello" class="icon">
+            <h1>Create Trello Card</h1>
+        </div>
+        
+        <div class="page-info">
+            <div class="page-title" id="pageTitle">Loading...</div>
+            <div class="page-url" id="pageUrl">Loading...</div>
+        </div>
+        
+        <form id="cardForm">
+            <div class="form-group">
+                <label for="cardTitle">Card Title:</label>
+                <input type="text" id="cardTitle" placeholder="Enter card title" required>
+            </div>
+            
+            <div class="form-group" id="detectedLabelsGroup" style="display: none;">
+                <label>Detected Labels:</label>
+                <div id="detectedLabels" class="labels-display"></div>
+            </div>
+            
+            <div class="form-group">
+                <label for="cardDesc">Description:</label>
+                <textarea id="cardDesc" placeholder="Enter card description" rows="4"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="boardSelect">Board:</label>
+                <select id="boardSelect">
+                    <option value="">Select a board...</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="listSelect">List:</label>
+                <select id="listSelect" disabled>
+                    <option value="">Select a list...</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="includeUrl">
+                    <input type="checkbox" id="includeUrl" checked>
+                    Include page URL in description
+                </label>
+            </div>
+            
+            <div class="form-group">
+                <label for="includeSelection">
+                    <input type="checkbox" id="includeSelection">
+                    Include selected text
+                </label>
+            </div>
+            
+            <div class="actions">
+                <button type="submit" id="createCard" class="btn-primary">Create Card</button>
+                <button type="button" id="openOptions" class="btn-secondary">Settings</button>
+            </div>
+        </form>
+        
+        <div id="status" class="status hidden"></div>
+    </div>
+    
+    <script src="popup.js"></script>
+</body>
+</html> 

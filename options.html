@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trello Card Creator - Settings</title>
+    <link rel="stylesheet" href="options.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="icons/icon48.png" alt="Trello Card Creator" class="icon">
+            <h1>Trello Card Creator Settings</h1>
+        </div>
+
+        <div class="content">
+            <div class="section">
+                <h2>Trello API Configuration</h2>
+                <p class="description">
+                    To use this extension, you need to provide your Trello API credentials. 
+                    Don't worry - these are stored securely on your device and never shared.
+                </p>
+
+                <div class="form-group">
+                    <label for="apiKey">API Key:</label>
+                    <input type="text" id="apiKey" placeholder="Enter your Trello API Key">
+                    <div class="help-text">
+                        Get your API key from: 
+                        <a href="https://trello.com/app-key" target="_blank" rel="noopener">https://trello.com/app-key</a>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="apiToken">API Token:</label>
+                    <input type="password" id="apiToken" placeholder="Enter your Trello API Token">
+                    <button type="button" id="toggleToken" class="toggle-btn">Show</button>
+                    <div class="help-text">
+                        Generate a token by clicking the "Token" link on the API key page above.
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <button type="button" id="validateBtn" class="btn-secondary">Test Connection</button>
+                    <button type="button" id="saveBtn" class="btn-primary">Save Settings</button>
+                </div>
+
+                <div id="status" class="status hidden"></div>
+            </div>
+
+            <div class="section">
+                <h2>How to Get Your API Credentials</h2>
+                <div class="instructions">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Get Your API Key</h3>
+                            <p>Visit <a href="https://trello.com/app-key" target="_blank" rel="noopener">https://trello.com/app-key</a> while logged into Trello</p>
+                            <p>Copy the "Key" value and paste it in the API Key field above</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Generate a Token</h3>
+                            <p>On the same page, click the "Token" link</p>
+                            <p>Click "Allow" to grant the extension access to your Trello account</p>
+                            <p>Copy the generated token and paste it in the API Token field above</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Test and Save</h3>
+                            <p>Click "Test Connection" to verify your credentials work</p>
+                            <p>Click "Save Settings" to store your configuration</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Default Preferences</h2>
+                <div class="form-group">
+                    <label for="defaultBoard">Default Board:</label>
+                    <select id="defaultBoard" disabled>
+                        <option value="">Select a board...</option>
+                    </select>
+                    <div class="help-text">Choose a default board to pre-select when creating cards</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="defaultList">Default List:</label>
+                    <select id="defaultList" disabled>
+                        <option value="">Select a list...</option>
+                    </select>
+                    <div class="help-text">Choose a default list to pre-select when creating cards</div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Privacy & Security</h2>
+                <div class="privacy-info">
+                    <p><strong>Your data is secure:</strong></p>
+                    <ul>
+                        <li>API credentials are stored locally on your device only</li>
+                        <li>No data is sent to any servers except Trello's official API</li>
+                        <li>This extension is open source - you can verify the code</li>
+                        <li>You can revoke API access at any time from your Trello account settings</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="options.js"></script>
+</body>
+</html> 
