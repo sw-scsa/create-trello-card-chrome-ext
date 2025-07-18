@@ -1,6 +1,6 @@
-# Trello Card Creator Browser Extension
+# Trello Card Creator Chrome Extension
 
-A browser extension that allows you to quickly create Trello cards from any website with just one click. Perfect for saving interesting articles, research, or any web content directly to your Trello boards.
+A chrome extension that allows you to quickly create Trello cards from any website with just one click. Perfect for saving interesting articles, research, or any web content directly to your Trello boards.
 
 ## ✨ Features
 
@@ -34,7 +34,7 @@ A browser extension that allows you to quickly create Trello cards from any webs
 
 ### Step 3: Configure the Extension
 
-1. **Click the extension icon** in your browser toolbar
+1. **Click the extension icon** in your chrome toolbar
 2. **Click "Settings"** or right-click the extension and select "Options"
 3. **Paste your API Key and Token** in the respective fields
 4. **Click "Test Connection"** to verify your credentials
@@ -134,7 +134,7 @@ convert -size 128x128 icons/icon.svg icons/icon128.png
 
 ### File Structure
 ```
-create-trello-card-browser-ext/
+create-trello-card-chrome-ext/
 ├── manifest.json          # Extension configuration
 ├── popup.html             # Main popup interface
 ├── popup.css              # Popup styling
